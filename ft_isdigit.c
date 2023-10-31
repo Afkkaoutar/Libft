@@ -1,3 +1,0 @@
-int isalpha(int c)
-{
-}
