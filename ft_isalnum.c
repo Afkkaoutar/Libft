@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 05:01:40 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/11/03 05:11:23 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/11/14 03:31:33 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 int		ft_isalnum(int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
+	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90)
+	|| (c >= 97 && c <= 122))
 		return (1);
-	return (0);
+	else
+		return (0);
 }
