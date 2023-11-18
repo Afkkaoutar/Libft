@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 06:25:11 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/11/14 06:46:33 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/11/16 11:39:20 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    int i;
+    size_t i;
     unsigned char *a;
     unsigned char *b;
 

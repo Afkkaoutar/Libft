@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 05:30:58 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/11/14 06:23:49 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/11/16 11:39:10 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int i;
+	size_t i;
 	unsigned char *a;
 	unsigned char	*b;
 

@@ -6,38 +6,26 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 16:01:33 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/11/05 16:01:50 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:03:15 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+ #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
-{
-    char *p;
-    int i;
-    int j;
+  char *ft_strchr(const char *s, int c)
+  {
+     int i = 0;
 
-    i = 0;
-    j = 0;
-    while(s[i] != '\0' && s[i] != c)
-        i++;
-    if ( i == strlen(s))
-        return(NULL);
-    p = malloc(sizeof(char) * strlen(s) - i + 1);
-    if (p == NULL)
-        return NULL;
-    while (s[i] != '\0')
+     while (s[i])
     {
-        p[j] = s[i];
-        i++;
-        j++;
-    }
-    return (p);
-}
-int main()
+         if (s[i] == c)
+            return ((char *)s + i);
+         i++;
+      }
+     return (NULL);
+  }
+int main() 
 {
-    char *c = "kawtar";
-    int n = 'p';
-    printf("%s\n", ft_strchr(c, n));
+    char s[] = "kaoutar";
+    printf("%s\n", ft_strchr(s, 'a'));
 }
