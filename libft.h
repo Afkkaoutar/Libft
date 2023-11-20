@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 22:20:01 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/11/19 00:31:44 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/11/20 13:15:13 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 #include <fcntl.h>
 
 
-int		ft_isalnum(int c);
+int     ft_isalnum(int c);
 int     ft_isalpha(int c);
 int     ft_isascii(int c);
 int     ft_isdigit(int c);
@@ -41,5 +41,10 @@ void   ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int nb, int fd);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
+char	*ft_strrchr(const char *s, int c);
+char *ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strdup(const char *s);
+// char *ft_strtrim(char const *s1, char const *set);
+
 
 #endif
