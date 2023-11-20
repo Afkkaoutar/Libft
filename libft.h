@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 22:20:01 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/11/20 13:15:13 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/11/20 22:51:32 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ char	*ft_strrchr(const char *s, int c);
 char *ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strdup(const char *s);
 // char *ft_strtrim(char const *s1, char const *set);
-
-
+size_t  ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 #endif
