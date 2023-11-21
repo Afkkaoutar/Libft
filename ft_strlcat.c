@@ -6,23 +6,12 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:15:21 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/11/20 22:42:39 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/11/21 10:31:40 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *str)
-{
-    size_t i;
-
-    i = 0;
-    while(str[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
-}
 size_t ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
     size_t i = 0;
@@ -41,4 +30,13 @@ size_t ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
     }
     dst[DESTINATION + i] = '\0';
     return (SOURCE+ DESTINATION);
+}
+int main()
+{
+    char str [10] = "kaw";
+    char str2 [] = "abcdefghij";
+    
+    printf("%ld\n",ft_strlcat(str, str2, 10));
+    printf("%s",str);
+    
 }

@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 22:20:01 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/11/20 22:51:32 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/11/21 14:11:45 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,15 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_strrchr(const char *s, int c);
 char *ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strdup(const char *s);
-// char *ft_strtrim(char const *s1, char const *set);
+char *ft_strtrim(char const *s1, char const *set);
 size_t  ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	*ft_memmove(void *dst, const void *src, size_t len);
+int        ft_atoi(const char *str);
+void	*ft_memchr(const void *s, int c, size_t n) ;
+char	*ft_strjoin(char const *s1, char const *s2);
+char *ft_strnstr(const char *haystack, const char *needle, size_t len);
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
+
 #endif
