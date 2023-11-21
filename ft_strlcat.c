@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:15:21 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/11/21 10:31:40 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/11/21 20:27:49 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,4 @@ size_t ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
     }
     dst[DESTINATION + i] = '\0';
     return (SOURCE+ DESTINATION);
-}
-int main()
-{
-    char str [10] = "kaw";
-    char str2 [] = "abcdefghij";
-    
-    printf("%ld\n",ft_strlcat(str, str2, 10));
-    printf("%s",str);
-    
 }

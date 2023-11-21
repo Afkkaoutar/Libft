@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 22:20:01 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/11/21 14:11:45 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/11/21 20:41:38 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,6 @@ void	*ft_memchr(const void *s, int c, size_t n) ;
 char	*ft_strjoin(char const *s1, char const *s2);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
