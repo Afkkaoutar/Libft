@@ -6,28 +6,30 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:15:21 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/11/21 20:27:49 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/11/22 17:35:26 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-    size_t i = 0;
-    size_t SOURCE = ft_strlen(src);
-    size_t DESTINATION = ft_strlen(dst);
+	size_t	i;
+	size_t	src_ln;
+	size_t	dest_ln;
 
-    if (!dst && !dstsize)
-        return (ft_strlen(src));
-    if (dstsize <= DESTINATION)
-        return (SOURCE + dstsize);
-    i = 0;
-    while (src[i] && DESTINATION + i < dstsize - 1)
-    {
-        dst[DESTINATION + i] = src[i];
-        i++;
-    }
-    dst[DESTINATION + i] = '\0';
-    return (SOURCE+ DESTINATION);
+	i = 0;
+	src_ln = ft_strlen(src);
+	dest_ln = ft_strlen(dst);
+	if (!dst && !dstsize)
+		return (ft_strlen(src));
+	if (dstsize <= dest_ln)
+		return (src_ln + dstsize);
+	while (src[i] && dest_ln + i < dstsize - 1)
+	{
+		dst[dest_ln + i] = src[i];
+		i++;
+	}
+	dst[dest_ln + i] = '\0';
+	return (src_ln + dest_ln);
 }

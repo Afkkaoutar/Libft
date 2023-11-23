@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 06:25:11 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/11/16 11:39:20 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/11/22 11:13:22 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,27 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    size_t i;
-    unsigned char *a;
-    unsigned char *b;
+	size_t			i;
+	unsigned char	*a;
+	unsigned char	*b;
 
-    i = 0;
-    a = (unsigned char *)dst;
-    b = (unsigned char *)src;
-    if (!a && !b)
-        return (NULL);
-    if (a > b)
-    {
-        while (len--)
-            a[len] = b[len];
-    }
-    else
-    {
-        while (i < len)
-        {
-            a[i] = b[i];
-            i++;
-        }
-    }
-    return (dst);
+	i = 0;
+	a = (unsigned char *)dst;
+	b = (unsigned char *)src;
+	if (!a && !b)
+		return (NULL);
+	if (a > b)
+	{
+		while (len--)
+			a[len] = b[len];
+	}
+	else
+	{
+		while (i < len)
+		{
+			a[i] = b[i];
+			i++;
+		}
+	}
+	return (dst);
 }

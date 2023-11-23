@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 19:47:55 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/11/19 00:37:20 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/11/22 11:59:51 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,3 @@ void	ft_putnbr_fd(int nb, int fd)
 		ft_putnbr_fd(n / 10, fd);
 	ft_putchar_fd((n % 10) + 48, fd);
 }
-
