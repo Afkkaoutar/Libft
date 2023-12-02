@@ -12,22 +12,30 @@ SRCS = ft_isalpha.c ft_memcpy.c ft_strlen.c ft_tolower.c ft_split.c \
 	ft_calloc.c ft_memchr.c ft_putnbr_fd.c ft_strlcat.c ft_strtrim.c \
 	ft_isalnum.c ft_memcmp.c ft_putstr_fd.c ft_strlcpy.c ft_substr.c \
 
+SRCS_BONUS = ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c ft_lstdelone_bonus.c \
+	ft_lstiter_bonus.c ft_lstlast_bonus.c ft_lstmap_bonus.c ft_lstnew_bonus.c ft_lstsize_bonus.c \
+
 HDR = libft.h
 
 OBJS = $(SRCS:.c=.o)
 
-all : $(NAME)
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
-$(NAME) : $(OBJS)
-	ar -rc  $(NAME) $(OBJS)
+all: $(NAME)
 
-%.o : %.c $(HDR)
+$(NAME): $(OBJS) $(HDR)
+	ar -rc $(NAME) $(OBJS)
+
+bonus: $(OBJS_BONUS) $(HDR)
+	ar -rc $(NAME) $(OBJS_BONUS)
+
+%.o: %.c
 	$(CC) $(FLAGS) -c $<
 
-clean :
-	rm -rf $(OBJS)
+clean:	
+	rm -rf $(OBJS) $(OBJS_BONUS)
 
-fclean : clean
+fclean: clean
 	rm -rf $(NAME)
 
-re : fclean all
+re: fclean all
