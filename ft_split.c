@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 00:39:23 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/12/12 07:56:43 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/12/12 09:40:20 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static size_t	ft_countword(char const *s, char c)
 
 static int	ft_split_norm(char **lst, char const *s, char c, int word_len)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (*s)
@@ -47,7 +47,7 @@ static int	ft_split_norm(char **lst, char const *s, char c, int word_len)
 			else
 				word_len = ft_strchr(s, c) - s;
 			lst[i++] = ft_substr(s, 0, word_len);
-			if (!(lst + 1))
+			if (!lst)
 				return (0);
 			s += word_len;
 		}
@@ -77,6 +77,6 @@ char	**ft_split(char const *s, char c)
 		}
 		free(lst);
 	}
-	lst[ft_countword((char *)s, c)] = 0;
+	lst[ft_countword((char *)s, c)] = NULL;
 	return (lst);
 }
