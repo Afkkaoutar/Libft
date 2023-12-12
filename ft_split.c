@@ -6,13 +6,13 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 00:39:23 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/12/12 01:45:29 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/12/12 07:56:43 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_countword(char const *s, char c)
+static size_t	ft_countword(char const *s, char c)
 {
 	size_t	count;
 
@@ -31,17 +31,10 @@ size_t	ft_countword(char const *s, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static int	ft_split_norm(char **lst, char const *s, char c, int word_len)
 {
-	char	**lst;
-	size_t	word_len;
-	size_t	i;
+	int	i;
 
-	if (!s)
-		return (NULL);
-	lst = (char **)malloc((ft_countword(s, c) + 1) * sizeof(char *));
-	if (!lst)
-		return (NULL);
 	i = 0;
 	while (*s)
 	{
@@ -54,16 +47,36 @@ char	**ft_split(char const *s, char c)
 			else
 				word_len = ft_strchr(s, c) - s;
 			lst[i++] = ft_substr(s, 0, word_len);
-			if (!lst[i - 1])
-			{
-				while (i > 0)
-					free(lst[--i]);
-				free(lst);
-				return (NULL);
-			}
+			if (!(lst + 1))
+				return (0);
 			s += word_len;
 		}
 	}
-	lst[i] = NULL;
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**lst;
+	size_t	word_len;
+	size_t	i;
+
+	word_len = 0;
+	if (!s)
+		return (NULL);
+	lst = (char **)malloc((ft_countword(s, c) + 1) * sizeof(char *));
+	if (!lst)
+		return (NULL);
+	i = 0;
+	if (!ft_split_norm(lst, s, c, word_len))
+	{
+		while (lst + i)
+		{
+			free(lst + i);
+			i++;
+		}
+		free(lst);
+	}
+	lst[ft_countword((char *)s, c)] = 0;
 	return (lst);
 }

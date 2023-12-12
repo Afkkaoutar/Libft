@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 22:20:01 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/12/12 00:08:35 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/12/12 08:02:59 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
-# include <fcntl.h>
-# include <string.h>
-# include <stddef.h>
 
 typedef struct s_list
 {
