@@ -6,9 +6,11 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 19:47:55 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/11/22 11:59:51 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/12/10 06:02:48 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 #include "libft.h"
 
