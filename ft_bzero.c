@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 23:26:26 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/11/21 22:45:01 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/12/14 11:52:42 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	ft_bzero(void *s, size_t n)
 
 	i = 0;
 	a = ((char *)s);
+	if ((int)n < 0)
+		return ;
 	while (i < n)
 	{
 		a[i] = 0;

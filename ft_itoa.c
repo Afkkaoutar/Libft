@@ -6,13 +6,13 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 00:38:59 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/12/10 05:03:28 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/12/14 10:29:22 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_lenght(long int nb)
+static int	ft_count_lenght(long int nb)
 {
 	int	lenght;
 
