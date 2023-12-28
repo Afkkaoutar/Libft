@@ -29,7 +29,10 @@ $(NAME): $(OBJS) $(HDR)
 bonus: $(OBJS_BONUS) $(HDR)
 	ar -rc $(NAME) $(OBJS_BONUS)
 
-%.o: %.c
+%.o: %.c $(HDR)
+	$(CC) $(FLAGS) -c $<
+
+%_bonus.o: %_bonus.c $(HDR)
 	$(CC) $(FLAGS) -c $<
 
 clean:	

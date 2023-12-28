@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 22:38:30 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/12/14 12:17:13 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/12/19 21:47:50 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	ns;
-	char	*p;
+	char	*p;	
 
 	i = 0;
-	ns = ft_strlen(s);
 	if (!s)
 		return (NULL);
+	ns = ft_strlen(s);
 	if (len > ft_strlen(s) - start)
 		len = ft_strlen(s) - start;
 	if (start >= ns)

@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 00:38:59 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/12/14 10:29:22 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/12/26 19:48:39 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static int	ft_count_lenght(long int nb)
 	int	lenght;
 
 	lenght = 0;
+	if (nb == 0)
+		return (1);
 	if (nb < 0)
 		lenght = 1;
 	while (nb)
@@ -31,11 +33,11 @@ char	*ft_itoa(int n)
 {
 	int			lenght;
 	char		*str;
-	long int	nb;
+	long		nb;
 
 	nb = n;
 	lenght = ft_count_lenght(nb);
-	str = (char *)malloc(sizeof(char) * lenght + 1);
+	str = (char *)malloc(lenght + 1);
 	if (!str)
 		return (NULL);
 	str[lenght] = '\0';

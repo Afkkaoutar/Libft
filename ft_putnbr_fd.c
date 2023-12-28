@@ -6,12 +6,11 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 19:47:55 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/12/14 05:45:02 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/12/16 20:42:03 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <fcntl.h>
 
 void	ft_putnbr_fd(int nb, int fd)
 {

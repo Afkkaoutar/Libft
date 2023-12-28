@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 22:50:32 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/12/10 05:19:33 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/12/19 21:47:27 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*ft_strtrim(char const *s, char const *set)
 	int	i;
 	int	j;
 
-	j = ft_strlen(s) - 1;
-	i = 0;
 	if (!set || !s)
 		return (NULL);
+	j = ft_strlen(s) - 1;
+	i = 0;
 	if (j == -1)
 		return (ft_substr(s, 0, 0));
 	while (s[i])
