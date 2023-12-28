@@ -6,7 +6,7 @@
 /*   By: kaafkhar <kaafkhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 22:20:01 by kaafkhar          #+#    #+#             */
-/*   Updated: 2023/12/22 10:22:19 by kaafkhar         ###   ########.fr       */
+/*   Updated: 2023/12/28 21:19:49 by kaafkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
 
 ///// BONUS PART /////
 
